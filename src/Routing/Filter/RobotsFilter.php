@@ -17,7 +17,7 @@ class RobotsFilter extends DispatcherFilter
 
         if (empty($config['when'])) {
             $config['when'] = function() use ($config) {
-                return $request->env($config['key']) === $config['value'];
+                return env($config['key']) === $config['value'];
             };
         }
 
